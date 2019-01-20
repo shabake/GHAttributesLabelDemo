@@ -13,6 +13,7 @@
 		D6B85AA821F466430082EE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B85AA721F466430082EE1D /* Assets.xcassets */; };
 		D6B85AAB21F466430082EE1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B85AA921F466430082EE1D /* LaunchScreen.storyboard */; };
 		D6B85AAE21F466430082EE1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B85AAD21F466430082EE1D /* main.m */; };
+		D6B85AB721F466890082EE1D /* GHAttributesLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B85AB621F466890082EE1D /* GHAttributesLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		D6B85AAA21F466430082EE1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6B85AAC21F466430082EE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B85AAD21F466430082EE1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D6B85AB521F466890082EE1D /* GHAttributesLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHAttributesLabel.h; sourceTree = "<group>"; };
+		D6B85AB621F466890082EE1D /* GHAttributesLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHAttributesLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		D6B85A9D21F466400082EE1D /* GHAttributesLabelDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D6B85AB421F4667C0082EE1D /* GHAttributesLabel */,
 				D6B85A9E21F466400082EE1D /* AppDelegate.h */,
 				D6B85A9F21F466400082EE1D /* AppDelegate.m */,
 				D6B85AA121F466400082EE1D /* ViewController.h */,
@@ -70,6 +74,15 @@
 			);
 			path = GHAttributesLabelDemo;
 			sourceTree = "<group>";
+		};
+		D6B85AB421F4667C0082EE1D /* GHAttributesLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D6B85AB521F466890082EE1D /* GHAttributesLabel.h */,
+				D6B85AB621F466890082EE1D /* GHAttributesLabel.m */,
+			);
+			path = GHAttributesLabel;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -141,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B85AB721F466890082EE1D /* GHAttributesLabel.m in Sources */,
 				D6B85AA321F466400082EE1D /* ViewController.m in Sources */,
 				D6B85AAE21F466430082EE1D /* main.m in Sources */,
 				D6B85AA021F466400082EE1D /* AppDelegate.m in Sources */,
@@ -286,7 +300,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
 				INFOPLIST_FILE = GHAttributesLabelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +318,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
 				INFOPLIST_FILE = GHAttributesLabelDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
