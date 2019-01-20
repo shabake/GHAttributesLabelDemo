@@ -37,23 +37,26 @@
 - (BOOL)canBecomeFirstResponder {
     return NO;
 }
+
 @end
+
 @interface GHAttributesLabel()<UITextViewDelegate>
+
 @property (nonatomic , strong) GHTextView *textView ;
-@property (nonatomic , copy) NSString *actionTest ;
+
+@property (nonatomic , copy) NSString *actionText ;
 
 @end
 @implementation GHAttributesLabel
 
 - (void)setAttributesText: (NSMutableAttributedString *)text actionText: (NSString *)actionText {
     self.textView.attributedText = text;
-    self.actionTest = actionText;
+    self.actionText = actionText;
 }
 
 
-- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction  {
-    if ([textView.text containsString:self.actionTest]) {
-        
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction {
+    if ([textView.text containsString:self.actionText]) {
         if (self.actionBlock) {
             self.actionBlock();
         }
@@ -67,10 +70,10 @@
     if (self == [super init]) {
         [self setupUI];
         [self configuration];
-
     }
     return self;
 }
+
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
         [self setupUI];
@@ -78,15 +81,19 @@
     }
     return self;
 }
+
 - (void)configuration {
     self.userInteractionEnabled = YES;
 }
+
 - (void)setupUI {
     [self addSubview:self.textView];
 }
+
 - (void)layoutSubviews {
     self.textView.frame = self.bounds;
 }
+
 
 - (GHTextView *)textView {
     if (_textView == nil) {
