@@ -19,10 +19,18 @@
     [super viewDidLoad];
 
     GHAttributesLabel *attributesLabel = [[GHAttributesLabel alloc]initWithFrame:CGRectMake(10, 200, [UIScreen mainScreen].bounds.size.width - 20, 44)];
-    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:@"我已经阅读并同意《注册协议》"];
+    
+    NSString *temp = @"我已经阅读并同意《注册协议》";
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:temp];
+
+    NSString *actionStr = @"《注册协议》";
+    NSRange range = [temp rangeOfString:actionStr];
+    
+    NSLog(@"range%@",NSStringFromRange(range));
     [attrStr addAttribute:NSLinkAttributeName
-                    value:@"《注册协议》"
-                    range:NSMakeRange(8, 6)];
+                    value:actionStr
+                    range: range];
+     
     [attrStr addAttribute:NSFontAttributeName
                     value:[UIFont systemFontOfSize:20]
                     range:NSMakeRange(0, attrStr.length)];
@@ -32,7 +40,7 @@
         [alertView show];
     };
     
-    [attributesLabel setAttributesText:attrStr actionText:@"《注册协议》"];
+    [attributesLabel setAttributesText:attrStr actionText:actionStr];
     
     [self.view addSubview:attributesLabel];
 }
